@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Particle)(type Legacy)(uri /Users/cino/Projects/Schematics/HumidityProbe/particle.lib/particle.lib)(options "")(descr ""))
+)
