@@ -1,3 +1,6 @@
 [submodule "HumidityProbe/particle.lib"]
 	path = HumidityProbe/particle.lib
 	url = https://github.com/sako0938/particle.lib.git
+[submodule "HumidityProbe/particle.pretty"]
+	path = HumidityProbe/particle.pretty
+	url = https://github.com/coredump-ch/particle.pretty.git
