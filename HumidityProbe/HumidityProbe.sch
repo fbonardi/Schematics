@@ -252,4 +252,15 @@ Text Label 8000 3000 0    50   ~ 0
 SCL
 Text Label 7550 2900 0    50   ~ 0
 SDA
+$Comp
+L Connector:Conn_01x07_Female J?
+U 1 1 5FD0A4CF
+P 4450 6300
+F 0 "J?" H 4478 6326 50  0000 L CNN
+F 1 "Conn_01x07_Female" H 4478 6235 50  0000 L CNN
+F 2 "" H 4450 6300 50  0001 C CNN
+F 3 "~" H 4450 6300 50  0001 C CNN
+	1    4450 6300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
