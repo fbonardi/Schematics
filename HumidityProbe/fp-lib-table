@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name ParticleFP)(type KiCad)(uri ${KIPRJMOD}/particle.pretty)(options "")(descr ""))
+  (lib (name Adafruit_BME280)(type KiCad)(uri ${KIPRJMOD}/Adafruit_BME280)(options "")(descr ""))
 )
