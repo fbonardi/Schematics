@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x08_Female J?
-U 1 1 5FA8EEEB
-P 5450 5050
-F 0 "J?" H 5478 5026 50  0000 L CNN
-F 1 "SSD1306 Connector" H 5478 4935 50  0000 L CNN
-F 2 "" H 5450 5050 50  0001 C CNN
-F 3 "~" H 5450 5050 50  0001 C CNN
-	1    5450 5050
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR?
 U 1 1 5FA90FD9
 P 2300 3300
@@ -55,7 +44,7 @@ P 3850 2800
 F 0 "U?" H 3421 2846 50  0000 R CNN
 F 1 "BME280" H 3421 2755 50  0000 R CNN
 F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 3850 2600 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 3850 2600 50  0001 C CNN
+F 3 "${KIPRJMOD}/Docs/BST-BME280_DS001-10.pdf" H 3850 2600 50  0001 C CNN
 	1    3850 2800
 	1    0    0    -1  
 $EndComp
@@ -66,12 +55,12 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x03_Female J?
 U 1 1 5FA99197
-P 4400 5150
-F 0 "J?" H 4428 5176 50  0000 L CNN
-F 1 "Soil Sensor Connector" H 4428 5085 50  0000 L CNN
-F 2 "" H 4400 5150 50  0001 C CNN
-F 3 "~" H 4400 5150 50  0001 C CNN
-	1    4400 5150
+P 3850 4950
+F 0 "J?" H 3700 4750 50  0000 L CNN
+F 1 "Soil Sensor Connector" H 3450 5200 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Horizontal" H 3850 4950 50  0001 C CNN
+F 3 "~" H 3850 4950 50  0001 C CNN
+	1    3850 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -120,10 +109,10 @@ $Comp
 L Connector:Conn_01x03_Female J?
 U 1 1 5FAAEF1A
 P 7500 5150
-F 0 "J?" H 7528 5176 50  0000 L CNN
-F 1 "Motion Sensor Connector" H 7528 5085 50  0000 L CNN
-F 2 "" H 7500 5150 50  0001 C CNN
-F 3 "~" H 7500 5150 50  0001 C CNN
+F 0 "J?" H 7350 4950 50  0000 L CNN
+F 1 "Motion Sensor Connector" H 7050 5400 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Horizontal" H 7500 5150 50  0001 C CNN
+F 3 "${KIPRJMOD}/Docs/pir-passive-infrared-proximity-motion-sensor.pdf" H 7500 5150 50  0001 C CNN
 	1    7500 5150
 	1    0    0    -1  
 $EndComp
@@ -192,7 +181,7 @@ P 6950 2800
 F 0 "U?" H 7000 2153 60  0000 C CNN
 F 1 "Photon" H 7000 2047 60  0000 C CNN
 F 2 "ParticleFP:photon_tht" H 7000 1941 60  0000 C CNN
-F 3 "" H 7500 3850 60  0000 C CNN
+F 3 "${KIPRJMOD}/Docs/photon-datasheet.pdf" H 7500 3850 60  0001 C CNN
 	1    6950 2800
 	1    0    0    -1  
 $EndComp
@@ -255,12 +244,65 @@ SDA
 $Comp
 L Connector:Conn_01x07_Female J?
 U 1 1 5FD0A4CF
-P 4450 6300
-F 0 "J?" H 4478 6326 50  0000 L CNN
-F 1 "BME 280 Connector" H 4478 6235 50  0000 L CNN
-F 2 "" H 4450 6300 50  0001 C CNN
-F 3 "~" H 4450 6300 50  0001 C CNN
-	1    4450 6300
+P 3850 6400
+F 0 "J?" H 3700 6000 50  0000 L CNN
+F 1 "TempHumityPressure BME 280 Connector" H 3100 6850 50  0000 L CNN
+F 2 "Display:Adafruit_BME280" H 3850 6400 50  0001 C CNN
+F 3 "${KIPRJMOD}/Docs/BST-BME280_DS001-10.pdf" H 3850 6400 50  0001 C CNN
+	1    3850 6400
+	1    0    0    -1  
+$EndComp
+Text Label 3850 6100 0    50   ~ 0
+Vin
+Text Label 3850 6200 0    50   ~ 0
+3Vo
+Text Label 3850 6300 0    50   ~ 0
+GND
+Text Label 3850 6400 0    50   ~ 0
+SCK
+Text Label 3850 6500 0    50   ~ 0
+SDO
+Text Label 3850 6600 0    50   ~ 0
+SDI
+Text Label 3850 6700 0    50   ~ 0
+CS
+Text Label 6000 5700 0    50   ~ 0
+SDA
+Text Label 6000 5800 0    50   ~ 0
+SCL
+Text Label 6000 5900 0    50   ~ 0
+DC_SA0
+Text Label 6000 6000 0    50   ~ 0
+RST
+Text Label 6000 6100 0    50   ~ 0
+CS
+Text Label 6000 6200 0    50   ~ 0
+3.3
+Text Label 6000 6300 0    50   ~ 0
+VCC
+Text Label 6000 6400 0    50   ~ 0
+GND
+Text Label 3850 4850 0    50   ~ 0
+GND
+Text Label 3850 4950 0    50   ~ 0
+VCC
+Text Label 3850 5050 0    50   ~ 0
+AOUT
+Text Label 7500 5250 0    50   ~ 0
+VCC
+Text Label 7500 5050 0    50   ~ 0
+GND
+Text Label 7500 5150 0    50   ~ 0
+DOUT
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 5FA8EEEB
+P 6000 6000
+F 0 "J?" H 5850 5500 50  0000 L CNN
+F 1 "Display SSD1306 Connector" H 5650 6450 50  0000 L CNN
+F 2 "Display:Adafruit_SSD1306" H 6000 6000 50  0001 C CNN
+F 3 "${KIPRJMOD}/Docs/SSD1306.pdf" H 6000 6000 50  0001 C CNN
+	1    6000 6000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
