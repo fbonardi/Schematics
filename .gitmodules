@@ -4,3 +4,6 @@
 [submodule "HumidityProbe/particle.pretty"]
 	path = HumidityProbe/particle.pretty
 	url = https://github.com/coredump-ch/particle.pretty.git
+[submodule "HumidityProbe/digikey-kicad-library"]
+	path = HumidityProbe/digikey-kicad-library
+	url = https://github.com/Digi-Key/digikey-kicad-library.git
