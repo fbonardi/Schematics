@@ -133,6 +133,24 @@ X Shield 6 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_C
+#
+DEF Device_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_LED
 #
 DEF Device_LED D 0 40 N N 1 F N
@@ -213,6 +231,82 @@ X A3 9 -450 100 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# Sensor_BME280
+#
+DEF Sensor_BME280 U 0 20 Y Y 1 F N
+F0 "U" -350 450 50 H V C CNN
+F1 "Sensor_BME280" 300 450 50 H V C CNN
+F2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" 1500 -450 50 H I C CNN
+F3 "" 0 -200 50 H I C CNN
+$FPLIST
+ *LGA*2.5x2.5mm*P0.65mm*Clockwise*
+$ENDFPLIST
+DRAW
+S -400 400 400 -400 0 1 10 f
+X GND 1 -100 -600 200 U 50 50 1 1 W
+X CSB 2 600 -300 200 L 50 50 1 1 I
+X SDI 3 600 -100 200 L 50 50 1 1 B
+X SCK 4 600 100 200 L 50 50 1 1 I
+X SDO 5 600 300 200 L 50 50 1 1 B
+X VDDIO 6 -100 600 200 D 50 50 1 1 W
+X GND 7 100 -600 200 U 50 50 1 1 W
+X VDD 8 100 600 200 D 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+# dk_Diodes-Zener-Single_1N5231BTR
+#
+DEF dk_Diodes-Zener-Single_1N5231BTR Z 0 0 N N 1 F N
+F0 "Z" 0 100 60 H V C BNN
+F1 "dk_Diodes-Zener-Single_1N5231BTR" 0 -100 60 H V C CNN
+F2 "digikey-footprints:DO-35" 200 200 60 H I L CNN
+F3 "https://www.onsemi.com/pub/Collateral/1N5221B-D.PDF" 200 300 60 H I L CNN
+F4 "1N5231BFSCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "1N5231BTR" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Diodes - Zener - Single" 200 700 60 H I L CNN "Family"
+F8 "https://www.onsemi.com/pub/Collateral/1N5221B-D.PDF" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/on-semiconductor/1N5231BTR/1N5231BFSCT-ND/1532765" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "DIODE ZENER 5.1V 500MW DO35" 200 1000 60 H I L CNN "Description"
+F11 "ON Semiconductor" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+P 2 0 1 0 50 -50 25 -50 N
+P 2 0 1 0 50 50 50 -50 N
+P 2 0 1 0 50 50 75 50 N
+P 4 0 1 0 -50 50 -50 -50 50 0 -50 50 F
+X ~ A -200 0 150 R 50 50 1 1 P
+X ~ K 200 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_PMIC-Voltage-Regulators-DC-DC-Switching-Regulators_AOZ1280CI
+#
+DEF dk_PMIC-Voltage-Regulators-DC-DC-Switching-Regulators_AOZ1280CI U 0 40 Y Y 1 F N
+F0 "U" -100 140 60 H V R CNN
+F1 "dk_PMIC-Voltage-Regulators-DC-DC-Switching-Regulators_AOZ1280CI" 30 -350 60 H V L CNN
+F2 "digikey-footprints:SOT-23-6" 200 200 60 H I L CNN
+F3 "http://aosmd.com/res/data_sheets/AOZ1280CI.pdf" 200 300 60 H I L CNN
+F4 "785-1277-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "AOZ1280CI" 200 500 60 H I L CNN "MPN"
+F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
+F7 "PMIC - Voltage Regulators - DC DC Switching Regulators" 200 700 60 H I L CNN "Family"
+F8 "http://aosmd.com/res/data_sheets/AOZ1280CI.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/alpha-omega-semiconductor-inc/AOZ1280CI/785-1277-1-ND/2769845" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "IC REG BUCK ADJ 1.2A SOT23-6" 200 1000 60 H I L CNN "Description"
+F11 "Alpha & Omega Semiconductor Inc." 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -200 100 200 -300 0 1 0 f
+X BST 1 -300 0 100 R 50 50 1 1 P
+X GND 2 0 -400 100 U 50 50 1 1 W
+X FB 3 -300 -100 100 R 50 50 1 1 P
+X EN 4 -300 -200 100 R 50 50 1 1 I
+X VIN 5 0 200 100 D 50 50 1 1 W
+X LX 6 300 -100 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
 # power_+3.3V
 #
 DEF power_+3.3V #PWR 0 0 Y Y 1 F P
@@ -229,6 +323,21 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
+# power_+5V
+#
+DEF power_+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power_+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
@@ -239,6 +348,23 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# pspice_INDUCTOR
+#
+DEF pspice_INDUCTOR L 0 0 N Y 1 F N
+F0 "L" 0 100 50 H V C CNN
+F1 "pspice_INDUCTOR" 0 -50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+A -150 0 50 1 1799 0 1 0 N -100 0 -200 0
+A -50 0 50 1 1799 0 1 0 N 0 0 -100 0
+A 50 0 50 1 1799 0 1 0 N 100 0 0 0
+A 150 0 50 1 1799 0 1 0 N 200 0 100 0
+X 1 1 -250 0 50 R 30 30 1 1 I
+X 2 2 250 0 50 L 30 30 1 1 I
 ENDDRAW
 ENDDEF
 #
